@@ -1,18 +1,25 @@
 package tpseminario
 
-import grails.testing.web.controllers.ControllerUnitTest
+import grails.testing.mixin.integration.Integration
+import grails.transaction.*
 import spock.lang.Specification
 
-class HolaControllerSpec extends Specification implements ControllerUnitTest<HolaController> {
+@Integration
+@Rollback
+class ReputacionTestSpec extends Specification {
 
     //def setup() {
+		//super.setup()
     //}
 
     //def cleanup() {
+		//super.cleanup()
     //}
 
     //void "test something"() {
       //  expect:"fix me"
         //    true == false
     //}
+
+
 }

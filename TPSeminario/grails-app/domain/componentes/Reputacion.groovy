@@ -13,6 +13,7 @@ class Reputacion {
     }
 
 	Reputacion(){
+        cantidadDeEstrellas = 0
     	cantidadDeCalificaciones = 0
 		promedio = 0
     }
