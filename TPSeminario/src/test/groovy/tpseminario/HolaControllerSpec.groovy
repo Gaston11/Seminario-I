@@ -5,11 +5,11 @@ import spock.lang.Specification
 
 class HolaControllerSpec extends Specification implements ControllerUnitTest<HolaController> {
 
-    //def setup() {
-    //}
+    def setup() {
+    }
 
-    //def cleanup() {
-    //}
+    def cleanup() {
+    }
 
     //void "test something"() {
       //  expect:"fix me"
