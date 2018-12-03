@@ -1,3 +1,7 @@
 Resumen DDD. Domain Driven Design:
 
 https://github.com/jatubio/5minutos_laravel/wiki/Resumen-sobre-DDD.-Domain-Driven-Design
+
+
+Comandos para hacer pruebas
+https://docs.grails.org/latest/guide/testing.html
