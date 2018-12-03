@@ -8,6 +8,7 @@ class Alumno {
     String telefono
     int edad
     Reputacion reputacion   
+    List<Deporte> listaDeportes
 
     static constraints = {
     	nombre black: false, nullable: false
@@ -24,12 +25,13 @@ class Alumno {
     	reputacion.calificar(calificacion)
     }
 
-    void crearDeporte(){
-    	//hacer
+    void crearDeporte(String unNombre, int cantidad){
+    	deporte = new Deporte(unNombre, cantidad)
+    	listaDeportes.add(deporte)
     }
 
-    void calificarDeporte(){
-    	//hacer
+    void calificarDeporte(Deporte unDeporte, int unaCalificacion){
+    	///hacer!!
     }
 
     
