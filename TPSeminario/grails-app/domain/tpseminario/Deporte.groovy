@@ -2,6 +2,7 @@ package tpseminario
 
 class Deporte {
 
+	Alumno organizador
 	String nombre
 	int cantidadCupos
 	List<Alumno> listaInscriptos
@@ -16,9 +17,10 @@ class Deporte {
     	resultado nullable: false
     }
 
-    Deporte (String unNombre, int cantidad ){
+    Deporte (String unNombre, int cantidad, Alumno unAlumno ){
     	nombre = unNombre
     	cantidadCupos = cantidad
+    	organizador = unAlumno
     }
 
     void inscripcion(Alumno unAlumno){
@@ -33,5 +35,7 @@ class Deporte {
     	resultado = unResultado
     }
 
+
+    
 
 }

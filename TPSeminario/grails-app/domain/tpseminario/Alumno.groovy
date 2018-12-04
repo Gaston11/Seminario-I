@@ -26,12 +26,14 @@ class Alumno {
     }
 
     void crearDeporte(String unNombre, int cantidad){
-    	deporte = new Deporte(unNombre, cantidad)
+    	deporte = new Deporte(unNombre, cantidad, this)
     	listaDeportes.add(deporte)
     }
 
     void calificarDeporte(Deporte unDeporte, int unaCalificacion){
-    	///hacer!!
+    	
+    	 if ( listaDeportes.contains(unDeporte) ) 
+    	 	unDeporte.calificar(unaCalificacion)
     }
 
     
