@@ -35,6 +35,10 @@ class Deporte {
     	resultado = unResultado
     }
 
+    void calificar(int calificacion){
+    	organizador.calificar(calificacion)
+    }
+
 
     
 
