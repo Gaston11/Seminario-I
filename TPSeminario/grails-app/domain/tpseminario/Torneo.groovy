@@ -6,6 +6,7 @@ class Torneo {
     int cantidadDeCupos
     Deporte deporte
     Alumno organizador
+    List<Equipo> listaEquipos
 
     static constraints = {
         cantidadDeCupos min: 0, black: false, nullable: false
@@ -23,6 +24,10 @@ class Torneo {
 
     void establecerCupos(int cantidad){
     	cantidadDeCupos = cantidad
+    }
+
+    void agregarEquipo(Equipo unEquipo ){
+    	listaEquipos.add(unEquipo)
     }
 
     

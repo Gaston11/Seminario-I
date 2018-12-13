@@ -8,7 +8,8 @@ class Partida {
 	String resultado
 
     static constraints = {
-
+    	equipo1 nullable: false 
+    	equipo2 nullable: false 
     }
 
     Partida(Equipo equipo1, Equipo equipo2){
