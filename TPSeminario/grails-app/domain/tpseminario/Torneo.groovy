@@ -1,4 +1,5 @@
 package tpseminario
+import componentes.*
 
 
 class Torneo {

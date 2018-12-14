@@ -1,11 +1,12 @@
 package tpseminario
+import componentes.*
 
 class Deporte {
 
 	Alumno organizador
 	String nombre
 	int cantidadCupos
-	List<Alumno> listaInscriptos
+	//List<Alumno> listaInscriptos
 	String resultado
 	Date horaInicio
 	//espacio
@@ -23,8 +24,9 @@ class Deporte {
     	organizador = unAlumno
     }
 
-    void inscripcion(Alumno unAlumno){
-    	listaInscriptos.add(unAlumno)
+    Partida crearPartida(Equipo equipo1, Equipo equipo2){
+    	//listaInscriptos.add(unAlumno)
+        return new Partida(equipo1, equipo2)
     }
 
     void establecerHorario( Date hora){
@@ -38,8 +40,5 @@ class Deporte {
     void calificar(int calificacion){
     	organizador.calificar(calificacion)
     }
-
-
-    
 
 }
