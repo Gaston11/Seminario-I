@@ -3,7 +3,8 @@ import componentes.*
 
 class Deporte {
 
-	Alumno organizador
+	//Alumno organizador
+    int id_organizador 
 	String nombre
 	int cantidadCuposPorEquipo
 	//List<Alumno> listaInscriptos
@@ -22,6 +23,8 @@ class Deporte {
     	nombre = unNombre
     	cantidadCuposPorEquipo = cantidad
     	organizador = unAlumno
+    	cantidadCupos = cantidad
+    	id_organizador = unAlumno.id
     }
 
     Partida crearPartida(Equipo equipo1, Equipo equipo2){
