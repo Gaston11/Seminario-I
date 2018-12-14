@@ -22,8 +22,9 @@ class AlumnoService {
 
     }
 
-    def save(Alumno alumno){
-    	//def alumno = new Alumno()
+    def save(String nombre, String telefono, Date fechaNacimiento){
+    	def alumno = new Alumno(fechaNacimiento,nombre,telefono)
+    	
     }
 
     def delete(int id){
