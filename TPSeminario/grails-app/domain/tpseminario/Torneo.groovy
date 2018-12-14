@@ -4,7 +4,7 @@ import componentes.*
 
 class Torneo {
     
-    int cantidadDeCupos
+    int maximaCantidadDeEquipos
     Deporte deporte
     Alumno organizador
     List<Equipo> listaEquipos
@@ -23,15 +23,18 @@ class Torneo {
         organizador.calificar(calificacion)
     }
 
-    void establecerCupos(int cantidad){
-    	cantidadDeCupos = cantidad
+    void establecerCantidadMaximaDeEquipos(int cantidad){
+    	maximaCantidadDeEquipos = cantidad
     }
 
     void agregarEquipo(Equipo unEquipo ){
-    	listaEquipos.add(unEquipo)
+    	if (listaEquipos.size <= this.maximaCantidadDeEquipos)
+    		listaEquipos.add(unEquipo)
     }
 
-    
+    void generarTorneo(){
+    	
+    }
 
 }
 

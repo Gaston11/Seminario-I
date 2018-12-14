@@ -5,7 +5,7 @@ class Deporte {
 
 	Alumno organizador
 	String nombre
-	int cantidadCupos
+	int cantidadCuposPorEquipo
 	//List<Alumno> listaInscriptos
 	String resultado
 	Date horaInicio
@@ -20,7 +20,7 @@ class Deporte {
 
     Deporte (String unNombre, int cantidad, Alumno unAlumno ){
     	nombre = unNombre
-    	cantidadCupos = cantidad
+    	cantidadCuposPorEquipo = cantidad
     	organizador = unAlumno
     }
 

@@ -17,8 +17,11 @@ class Alumno {
     	fechaNacimiento black: false, nullable: false
     }
 
-    Alumno(){
+    Alumno(Date unaFecha, String unNombre, String unTelefono){
     	reputacion = new Reputacion()
+    	this.fechaNacimiento = unaFecha
+    	this.nombre = unaFecha
+    	this.telefono = unTelefono
     }
 
     void calificar(int calificacion){
