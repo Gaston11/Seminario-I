@@ -3,12 +3,17 @@ import componentes.*
 
 class Alumno {
 
+    int id
     Date fechaNacimiento
     String nombre
     String telefono
     int edad
     Reputacion reputacion   
     List<Deporte> listaDeportes
+
+    static mapping = {
+        id generator: 'uuid'
+    }
 
     static constraints = {
     	nombre black: false, nullable: false

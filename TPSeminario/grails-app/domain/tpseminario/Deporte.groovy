@@ -1,17 +1,30 @@
 package tpseminario
 import componentes.*
 
+enum Espacio {
+    GIMNASIO, SALA1, SALA2
+}
+enum Estado {
+    ENCURSO,TERMINADO,PENDIENTE
+}
+
 class Deporte {
 
 	//Alumno organizador
+    int id
     int id_organizador 
 	String nombre
 	int cantidadCuposPorEquipo
 	//List<Alumno> listaInscriptos
-	String resultado
+	//int resultado
 	Date horaInicio
-	//espacio
-	//estado
+	Espacio espacio
+	Estado estado
+
+    static mapping = {
+        id generator: 'uuid'
+        //id_organizador foreign
+    }
 
     static constraints = {
     	nombre black: false, nullable: false
