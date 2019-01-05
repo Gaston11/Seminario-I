@@ -3,26 +3,38 @@ import componentes.Partida
 
 class ArbolTorneo {
 
+	Nodo raiz
+
     static constraints = {
     }
 
-    Nodo raiz
  
-    ArbolTorneo( Partida unaPartida ) {
-        this.raiz = new Nodo( unaPartida )
+    ArbolTorneo(  ) {
     }
- 
-    ArbolTorneo( Nodo raiz ) {
-        this.raiz = raiz;
-    }
- 
+
     Nodo getRaiz() {
         return raiz;
     }
  
-    void setRaiz(Nodo raiz) {
-        this.raiz = raiz;
+    void setRaiz(Partida partida) {
+        Nodo nodo = new Nodo(partida) 
+        this.raiz = nodo;
     }
 
+    void setRaiz(Nodo nodo) {
+        this.raiz = nodo;
+    }
+
+
+
+    void agregarNodo(Nodo nodo, Nodo raiz){
+    	if (raiz == null){
+    		this.setRaiz(raiz)
+    	} else{
+    		if (raiz.getHojaDerecha() == null){
+    			this.setRaiz()
+    		}
+    	}
+    }
 
 }
