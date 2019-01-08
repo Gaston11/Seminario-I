@@ -18,12 +18,12 @@ class Alumno {
     static constraints = {
     	nombre black: false, nullable: false
     	telefono black: false, nullable: false
-    	edad black: false, nullable: false, min: 0, max: 100
+    	edad black: true, nullable: true, min: 0, max: 100
     	fechaNacimiento black: false, nullable: false
     }
 
     Alumno(Date unaFecha, String unNombre, String unTelefono){
-    	reputacion = new Reputacion()
+    	//reputacion = new Reputacion()
     	this.fechaNacimiento = unaFecha
     	this.nombre = unaFecha
     	this.telefono = unTelefono

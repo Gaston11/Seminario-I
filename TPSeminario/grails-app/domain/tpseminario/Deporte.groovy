@@ -32,12 +32,12 @@ class Deporte {
     	resultado nullable: false
     }
 
-    Deporte (String unNombre, int cantidad, Alumno unAlumno ){
+    Deporte (String unNombre, int cantidad, int unAlumno ){
     	nombre = unNombre
     	cantidadCuposPorEquipo = cantidad
     	organizador = unAlumno
     	cantidadCupos = cantidad
-    	id_organizador = unAlumno.id
+    	id_organizador = unAlumno
     }
 
     Partida crearPartida(Equipo equipo1, Equipo equipo2){

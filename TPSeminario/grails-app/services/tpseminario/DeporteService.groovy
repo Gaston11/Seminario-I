@@ -22,7 +22,7 @@ class DeporteService {
 
     }
 
-    def save(String nombre, int cantidad, Alumno alumno){
+    def save(String nombre, int cantidad, int alumno){
     	def deporte = new Deporte(nombre, cantidad, alumno)
     	
     }

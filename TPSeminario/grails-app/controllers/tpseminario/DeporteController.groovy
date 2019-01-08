@@ -12,7 +12,7 @@ class DeporteController {
     	
     }
 
-    def create(){
-        respond deporteService.save(params.nombre, params.cantidad, params.alumno)
+    def create(int id){
+        respond deporteService.save(params.nombre, params.cantidad, id)
     }
 }
