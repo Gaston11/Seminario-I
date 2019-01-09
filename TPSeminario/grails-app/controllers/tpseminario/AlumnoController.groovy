@@ -15,7 +15,7 @@ class AlumnoController {
     }
 
     def create(){
-        respond alumnoService.save(params.nombre, params.telefono, params.fechaNacimiento)
+        respond new Alumno()
     }
 
 
@@ -23,27 +23,27 @@ class AlumnoController {
     //    respond alumnoService.getBy(id)
     //}
 
-    //def save(Alumno alumno) {
-    //    if (alumno == null) {
-    //        notFound()
-     //       return
-     //   }
-//
-  //      try {
-    //        alumnoService.save(alumno)
-      //  } catch (ValidationException e) {
-        //    respond alumno.errors, view:'create'
-          //  return
-        //}
-//
-  //      request.withFormat {
-    //        form multipartForm {
-      //          flash.message = message(code: 'default.created.message', args: [message(code: 'alumno.label', default: 'Alumno'), alumno.id])
-        //        redirect alumno
-        //    }
-          //  '*' { respond alumno, [status: CREATED] }
-        //}
-    //}
+    def save(Alumno alumno) {
+        if (alumno == null) {
+            notFound()
+           return
+        }
+
+        try {
+            alumnoService.save(alumno)
+        } catch (ValidationException e) {
+            respond alumno.errors, view:'create'
+            return
+        }
+
+        request.withFormat {
+           form multipartForm {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'alumno.label', default: 'Alumno'), alumno.id])
+                redirect alumno
+            }
+            '*' { respond alumno, [status: CREATED] }
+        }
+    }
 
     protected void notFound() {
         request.withFormat {

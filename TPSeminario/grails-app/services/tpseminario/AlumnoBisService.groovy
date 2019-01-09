@@ -3,18 +3,18 @@ package tpseminario
 import grails.gorm.transactions.Transactional
 
 @Transactional
-class AlumnoService {
+class AlumnoBisService {
 
     def getAll() {
-    	Alumno.where{}.findAll()
+    	AlumnoBis.where{}.findAll()
     }
 
     def getBy(int id){
-    	Alumno.get(id)
+    	AlumnoBis.get(id)
     }
 
     def update(Alumno alumno){
-    	def alumnoOld = Alumno.get(alumno.id)
+    	def alumnoOld = AlumnoBis.get(alumno.id)
     	alumnoOld.fechaNacimiento = alumno.fechaNacimiento
     	alumnoOld.nombre = alumno.nombre
     	alumnoOld.telefono = alumno.telefono
@@ -22,15 +22,13 @@ class AlumnoService {
 
     }
 
-    def save( nombre,  telefono,  fechaNacimiento, edad){
-        if(edad != null){
-        	def alumno = new Alumno(fechaNacimiento,nombre,telefono,edad)
-        }
+    def save( nombre, telefono, fechaNacimiento, edad){
+    	def alumno = new AlumnoBis(fechaNacimiento,nombre,telefono, edad)
     	
     }
 
     def delete(int id){
-    	def alumno = Alumno.get(id)
+    	def alumno = AlumnoBis.get(id)
     	alumno.delete()
     }
 }

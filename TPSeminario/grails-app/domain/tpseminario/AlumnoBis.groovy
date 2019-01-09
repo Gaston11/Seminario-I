@@ -1,7 +1,7 @@
 package tpseminario
 import componentes.*
 
-class Alumno {
+class AlumnoBis {
 
     int id
     Date fechaNacimiento
@@ -16,19 +16,20 @@ class Alumno {
     }
 
     static constraints = {
-    	nombre black: false, nullable: false
-    	telefono black: false, nullable: true
-    	edad black: true, nullable: false, min: 0, max: 100
-    	fechaNacimiento black: false, nullable: false
+    	nombre blank: false, nullable: false
+    	telefono blank: false, nullable: true
+    	edad blank: true, nullable: true, min: 0, max: 100
+    	fechaNacimiento blank: false, nullable: false
+    	//reputacion blank: false, nullable:true
     }
 
-    //Alumno( unaFecha,  unNombre,  unTelefono, edad){
+    AlumnoBis(Date unaFecha, String unNombre, String unTelefono, int unaedad){
     	//reputacion = new Reputacion()
-    //	this.fechaNacimiento = unaFecha
-    //	this.nombre = unaFecha
-    //	this.telefono = unTelefono
-    //    this.edad = edad
-    //}
+    	this.fechaNacimiento = unaFecha
+    	this.nombre = unaFecha
+    	this.telefono = unTelefono
+    	this.edad = edad
+    }
 
     void calificar(int calificacion){
     	reputacion.calificar(calificacion)
@@ -45,5 +46,4 @@ class Alumno {
     	 	unDeporte.calificar(unaCalificacion)
     }
 
-    
 }
