@@ -1,9 +1,9 @@
-package tpseminario
+package componentes
 
-import grails.testing.web.controllers.ControllerUnitTest
+import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class HolaControllerSpec extends Specification implements ControllerUnitTest<HolaController> {
+class ReputacionSpec extends Specification implements DomainUnitTest<Reputacion> {
 
     def setup() {
     }
