@@ -7,14 +7,14 @@ class Reputacion {
     int sumatoriaCalificaciones
 
     static constraints = {
-        cantidadDeEstrellas range: 0..5, black: false, nullable: false
-		cantidadDeCalificaciones min: 0, black: false, nullable: false
-		sumatoriaCalificaciones min: 0, black: false, nullable: false
+        cantidadDeEstrellas range: 0..5, blank: false, nullable: false
+		cantidadDeCalificaciones min: 0, blank: false, nullable: false
+		sumatoriaCalificaciones min: 0, blank: false, nullable: false
     }
 
 	Reputacion(){
     	cantidadDeCalificaciones = 0
-		promedio = 0
+		//promedio = 0
     }
 
 	

@@ -22,10 +22,10 @@ class AlumnoService {
 
     }
 
-    def save( nombre,  telefono,  fechaNacimiento, edad){
-        if(edad != null){
-        	def alumno = new Alumno(fechaNacimiento,nombre,telefono,edad)
-        }
+    def save( Alumno alumnoCreado){
+        
+        def alumno = alumnoCreado
+        alumno.save()
     	
     }
 

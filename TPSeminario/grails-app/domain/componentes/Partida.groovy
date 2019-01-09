@@ -6,16 +6,14 @@ enum Estado {
 
 class Partida {
 
-	Equipo equipo1
-	Equipo equipo2
-	Estado estado = PENDIENTE
+	//Equipo equipo1
+	//Equipo equipo2
+	//Estado estado = PENDIENTE
 	String resultado
 	boolean ganadorEquipo1 = false
 	boolean ganadorEquipo2 = false
 
-    static constraints = {
-    	equipo1 nullable: false 
-    	equipo2 nullable: false 
+    static constraints = { 
     }
 
     Partida(Equipo equipo1, Equipo equipo2){
@@ -36,11 +34,11 @@ class Partida {
     }
 
     Equipo getEquipo1(){
-    	return this.equipo1;
+    	this.equipo1;
     }
 
     Equipo getEquipo2(){
-    	return this.equipo2;
+    	this.equipo2;
     }
 
     private void modificarEstado(){
