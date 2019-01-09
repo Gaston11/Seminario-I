@@ -12,8 +12,8 @@ class HolaControllerSpec extends Specification implements ControllerUnitTest<Hol
     def cleanup() {
     }
 
-    //void "test something"() {
-      //  expect:"fix me"
-        //    true == false
-    //}
+    void "test something"() {
+        expect:"fix me"
+            true == false
+    }
 }

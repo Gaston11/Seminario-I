@@ -1,10 +1,14 @@
 package componentes
 
+enum Estado {
+    ENCURSO,TERMINADO,PENDIENTE
+}
+
 class Partida {
 
 	Equipo equipo1
 	Equipo equipo2
-	//estado
+	Estado estado = PENDIENTE
 	String resultado
 	boolean ganadorEquipo1 = false
 	boolean ganadorEquipo2 = false
@@ -42,6 +46,15 @@ class Partida {
     private void modificarEstado(){
     	//estado
     }
+
+    /*
+    public Equipo getGanador(){
+    	Equipo equipo = null
+		if (estado.TERMINADO){
+			equipo = 
+		}    	
+    }
+    */
 
 
 }
