@@ -28,7 +28,7 @@ class Torneo {
     }
 
     public void agregarEquipo(Equipo unEquipo){
-    	if (listaEquipos.size <= this.maximaCantidadDeEquipos)
+    	if (listaEquipos.size <= 4)
     		listaEquipos.add(unEquipo)
     }
 

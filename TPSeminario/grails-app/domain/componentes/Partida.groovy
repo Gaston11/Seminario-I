@@ -6,9 +6,9 @@ enum Estado {
 
 class Partida {
 
-	//Equipo equipo1
-	//Equipo equipo2
-	//Estado estado = PENDIENTE
+	Equipo equipo1
+	Equipo equipo2
+	Estado estado = PENDIENTE
 	String resultado
 	boolean ganadorEquipo1 = false
 	boolean ganadorEquipo2 = false
@@ -23,7 +23,7 @@ class Partida {
 
     void cargarResultado(String unResultado){
     	this.resultado = unResultado
-    	this.modificarEstado();
+    	this.modificarAEstadoTerminado();
     }
 
     void cargarGanador(Equipo unEquipo){
@@ -41,8 +41,12 @@ class Partida {
     	this.equipo2;
     }
 
-    private void modificarEstado(){
-    	//estado
+    private void modificarAEstadoTerminado(){
+    	this.estado = Estado.TERMINADO
+    }
+
+    public void modificarEstado(Estado unEstado){
+    	this.estado = unEstado
     }
 
     /*
