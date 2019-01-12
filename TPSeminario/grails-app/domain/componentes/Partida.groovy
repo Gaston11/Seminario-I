@@ -49,14 +49,22 @@ class Partida {
     	this.estado = unEstado
     }
 
-    /*
-    public Equipo getGanador(){
+    public Equipo getGanadorPartidaTerminada(){
     	Equipo equipo = null
-		if (estado.TERMINADO){
-			equipo = 
+		if (this.estado == TERMINADO){
+			equipo = this.getGanador() 
 		}    	
+		return equipo
     }
-    */
+    
+    private Equipo getGanador(){
+    	if (this.ganadorEquipo1){
+    		return this.equipo1
+    	} 
+    	else
+    		return this.equipo2
+    }
+    	
 
 
 }
