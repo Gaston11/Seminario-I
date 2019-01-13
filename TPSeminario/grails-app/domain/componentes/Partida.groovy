@@ -21,6 +21,10 @@ class Partida {
     	this.equipo2 = equipo2
     }
 
+    Partida(){
+    	//Partida sin parametros
+    }
+
     void cargarResultado(String unResultado){
     	this.resultado = unResultado
     	this.modificarAEstadoTerminado();

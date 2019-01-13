@@ -43,6 +43,7 @@ class Torneo {
 
     this.listaDePartidas.add(partida1);
     this.listaDePartidas.add(partida2);
+    this.generarArbol();
     }
 
     public List<Partida> getPartidas(){
@@ -50,6 +51,27 @@ class Torneo {
     }
 
     
+    private void generarArbol(){
+    	this.arbolTorneo.setRaiz( new Partida() ) // partida en la raiz sin equipos
+    	Nodo nodo1 = new Nodo (this.listaDePartidas.get(0))
+    	Nodo nodo2 = new Nodo (this.listaDePartidas.get(1))
+
+    	this.arbolTorneo.agregarNodo(nodo1)
+    	this.arbolTorneo.agregarNodo(nodo2)
+
+    }
+
+    public getPartidasIniciales(){
+
+    }
+
+    public Partida getPartidaFinal(Equipo unEquipo, Equipo otroEquipo){
+    	return new Partida(unEquipo, otroEquipo)
+    }
+
+
+
+
     // comentario
 
     //public void modificarPartida()

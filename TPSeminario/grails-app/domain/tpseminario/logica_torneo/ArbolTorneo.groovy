@@ -27,14 +27,16 @@ class ArbolTorneo {
 
 
 
-    void agregarNodo(Nodo nodo, Nodo raiz){
+    void agregarNodo(Nodo nodo){
     	if (raiz == null){
-    		this.setRaiz(raiz)
+    		this.setRaiz(nodo)
     	} else{
     		if (raiz.getHojaDerecha() == null){
-    			this.setRaiz()
-    		}
-    	}
+    			raiz.setHojaDerecha(nodo)
+                }else {
+                    (raiz.setHojaIquierda(nodo))
+                }
+        }
     }
 
 }

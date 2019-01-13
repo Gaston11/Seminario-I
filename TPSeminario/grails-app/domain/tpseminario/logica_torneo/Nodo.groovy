@@ -9,13 +9,11 @@ class Nodo {
  	
  	Partida partida
  
-    Nodo padre;
     Nodo hojaIzquierda;
     Nodo hojaDerecha;
  
     Nodo(Partida unaPartida) {
         this.partida = unaPartida
-        this.padre = null
         this.hojaIzquierda = null
         this.hojaDerecha = null
     }
@@ -26,14 +24,6 @@ class Nodo {
  
     Partida getPartida() {
         return this.partida
-    }
- 
-    Nodo getPadre() {
-        return padre
-    }
- 
-    void setPadre(Nodo padre) {
-        this.padre = padre
     }
  
     Nodo getHojaIzquierda() {
