@@ -4,22 +4,13 @@ import componentes.*
 enum Espacio {
     GIMNASIO, SALA1, SALA2
 }
-enum Estado {
-    ENCURSO,TERMINADO,PENDIENTE
-}
 
 class Deporte {
 
-	//Alumno organizador
-    int id
-    int id_organizador 
+    int id 
 	String nombre
-	int cantidadCuposPorEquipo
-	//List<Alumno> listaInscriptos
-	//int resultado
-	Date horaInicio
+	int cantidadDeIntegrantesPorEquipo
 	Espacio espacio
-	Estado estado
 
     static mapping = {
         id generator: 'uuid'
@@ -29,32 +20,11 @@ class Deporte {
     static constraints = {
     	nombre black: false, nullable: false
     	cantidadCupos black: false, nullable: false, min: 0
-    	resultado nullable: false
     }
 
-    Deporte (String unNombre, int cantidad, int unAlumno ){
+    Deporte (String unNombre, int cantidad ){
     	nombre = unNombre
-    	cantidadCuposPorEquipo = cantidad
-    	organizador = unAlumno
-    	cantidadCupos = cantidad
-    	id_organizador = unAlumno
-    }
-
-    Partida crearPartida(Equipo equipo1, Equipo equipo2){
-    	//listaInscriptos.add(unAlumno)
-        return new Partida(equipo1, equipo2)
-    }
-
-    void establecerHorario( Date hora){
-    	horaInicio = hora
-    }
-
-    void establecerResultado(String unResultado){
-    	resultado = unResultado
-    }
-
-    void calificar(int calificacion){
-    	organizador.calificar(calificacion)
+    	cantidadDeIntegrantesPorEquipo = cantidad
     }
 
 }

@@ -10,8 +10,7 @@ class Partida {
 	Equipo equipo2
 	Estado estado = PENDIENTE
 	String resultado
-	boolean ganadorEquipo1 = false
-	boolean ganadorEquipo2 = false
+	Equipo equipoGanador = null
 
     static constraints = { 
     }
@@ -31,10 +30,7 @@ class Partida {
     }
 
     void cargarGanador(Equipo unEquipo){
-    	if (unEquipo == this.equipo1){
-    		this.ganadorEquipo1 = true
-    	}	
-    		else ganadorEquipo2 = true
+    	equipoGanador = unEquipo
     }
 
     Equipo getEquipo1(){
@@ -53,22 +49,8 @@ class Partida {
     	this.estado = unEstado
     }
 
-    public Equipo getGanadorPartidaTerminada(){
-    	Equipo equipo = null
-		if (this.estado == TERMINADO){
-			equipo = this.getGanador() 
-		}    	
-		return equipo
+    public Equipo getGanadorPartidaTerminada(){    	
+		return equipoGanador
     }
-    
-    private Equipo getGanador(){
-    	if (this.ganadorEquipo1){
-    		return this.equipo1
-    	} 
-    	else
-    		return this.equipo2
-    }
-    	
-
 
 }

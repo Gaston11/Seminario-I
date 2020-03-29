@@ -15,7 +15,7 @@ class Alumno {
         id generator: 'uuid'
     }
 
-    static constraints = {
+    static constraints = { 
     	nombre black: false, nullable: false
     	telefono black: false, nullable: true
     	edad black: true, nullable: false, min: 0, max: 100
