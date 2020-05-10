@@ -22,6 +22,10 @@ class Alumno {
     	fechaNacimiento black: false, nullable: false
     }
 
+    Alumno(){
+        
+    }
+
     //Alumno( unaFecha,  unNombre,  unTelefono, edad){
     	//reputacion = new Reputacion()
     //	this.fechaNacimiento = unaFecha
