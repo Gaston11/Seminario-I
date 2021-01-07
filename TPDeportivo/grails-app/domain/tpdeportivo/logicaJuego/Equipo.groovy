@@ -6,17 +6,20 @@ class Equipo {
 	List<Alumno> listaAlumnos
 
     static constraints = {
+        nombre black: false, nullable: false
+        listaAlumnos black: true, nullable: true,editable:false
     }
 
-    Equipo(String nombre){
-        nombreEquipo = nombreEquipo
-    }
-
-    void agregarAlumnno(Alumno unAlumno){
+    public void agregarAlumnno(Alumno unAlumno){
         listaAlumnos.add(unAlumno)
     }
 
-    void eliminarAlumno(Alumno unAlumno){
+    public void eliminarAlumno(Alumno unAlumno){
         listaAlumnos.remove(unAlumno)
+    }
+
+    @Override
+    public String toString() {
+        return this.nombreEquipo;
     }
 }
