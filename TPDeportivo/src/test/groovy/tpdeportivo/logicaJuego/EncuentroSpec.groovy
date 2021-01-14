@@ -3,7 +3,7 @@ package tpdeportivo.logicaJuego
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class PartidaSpec extends Specification implements DomainUnitTest<Partida> {
+class EncuentroSpec extends Specification implements DomainUnitTest<Encuentro> {
 
     def setup() {
     }

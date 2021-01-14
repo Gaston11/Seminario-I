@@ -4,7 +4,7 @@ enum Estado {
         ENCURSO,TERMINADO,PENDIENTE
     }
 
-class Partida {
+class Encuentro {
 
     Equipo equipo1
     Equipo equipo2
@@ -17,7 +17,6 @@ class Partida {
         equipo2 black: true, nullable: true,editable:false
         resultado black: true
         equipoGanador black: true, nullable: true,editable:false
-
     }
 
     void cargarResultado(String unResultado){
@@ -32,6 +31,4 @@ class Partida {
     public void modificarEstado(Estado unEstado){
         this.estado = unEstado
     }
-
-
 }
