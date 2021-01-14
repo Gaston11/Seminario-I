@@ -4,14 +4,21 @@ import tpdeportivo.*
 class Equipo {
     String nombreEquipo
 	List<Alumno> listaAlumnos
+    int maximoAlumnos
 
     static constraints = {
         nombre black: false, nullable: false
         listaAlumnos black: true, nullable: true,editable:false
+        maximoAlumnos black: false max: maximoAlumnos
+    }
+
+    Equipo (int maximo){
+        maximoAlumnos = maximo
     }
 
     public void agregarAlumnno(Alumno unAlumno){
-        listaAlumnos.add(unAlumno)
+        if (listaAlumnos.size() < maximoAlumnos)
+            listaAlumnos.add(unAlumno)
     }
 
     public void eliminarAlumno(Alumno unAlumno){
