@@ -1,15 +1,21 @@
 package tpdeportivo.logicaJuego
 import tpdeportivo.*
 
+enum Estado {
+    ABIERTO,CERRADO
+}
+
 class Equipo {
     String nombreEquipo
 	List<Alumno> listaAlumnos
     int maximoAlumnos
+    Estado estado = ABIERTO
 
     static constraints = {
         nombre black: false, nullable: false
         listaAlumnos black: true, nullable: true,editable:false
         maximoAlumnos black: false max: maximoAlumnos
+        estado black: false, nullable: false
     }
 
     Equipo (int maximo){
@@ -19,6 +25,7 @@ class Equipo {
     public void agregarAlumnno(Alumno unAlumno){
         if (listaAlumnos.size() < maximoAlumnos)
             listaAlumnos.add(unAlumno)
+            else estado = CERRADO
     }
 
     public void eliminarAlumno(Alumno unAlumno){

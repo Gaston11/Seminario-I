@@ -11,12 +11,14 @@ class Encuentro {
     Estado estado = Estado.PENDIENTE
     String resultado
     Equipo equipoGanador = null
+    Date horaInicio
 
     static constraints = {
         equipo1 black: true, nullable: true,editable:false
         equipo2 black: true, nullable: true,editable:false
         resultado black: true
         equipoGanador black: true, nullable: true,editable:false
+        horaInicio black: false, nullable: false
     }
 
     void cargarResultado(String unResultado){

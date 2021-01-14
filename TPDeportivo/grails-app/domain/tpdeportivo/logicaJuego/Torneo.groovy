@@ -20,7 +20,7 @@ class Torneo {
     }
 
     public void agregarEquipo(Equipo unEquipo){
-        if (listaEquipos.size <= 4)
+        if (listaEquipos.size() < 4)
             listaEquipos.add(unEquipo)
     }
 
@@ -56,7 +56,7 @@ class Torneo {
     }
 
     public Partida getPartidasIniciales(){
-        
+
     }
 
 
