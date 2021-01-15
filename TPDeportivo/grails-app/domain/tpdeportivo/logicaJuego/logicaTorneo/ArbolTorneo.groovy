@@ -12,8 +12,8 @@ class ArbolTorneo {
         return raiz;
     }
  
-    void setRaiz(Partida partida) {
-        Nodo nodo = new Nodo(partida) 
+    void setRaiz(Encuentro encuentro) {
+        Nodo nodo = new Nodo(encuentro) 
         this.raiz = nodo;
     }
 

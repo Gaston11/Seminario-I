@@ -8,7 +8,7 @@ class Torneo {
     Deporte deporte
     Alumno organizador
     List<Equipo> listaEquipos
-    List<Partida> listaDePartidas
+    List<Encuentro> listaDeEncuentros
     ArbolTorneo arbolTorneo = new ArbolTorneo()
 
     static constraints = {
@@ -26,38 +26,38 @@ class Torneo {
             listaEquipos.add(unEquipo)
     }
 
-    public void generarPartidas(){
+    public void generarEncuentros(){
         Equipo equipo0 = this.listaEquipos.get(0)
         Equipo equipo1 = this.listaEquipos.get(1)
         Equipo equipo2 = this.listaEquipos.get(2)
         Equipo equipo3 = this.listaEquipos.get(3)
 
-        Partida partida1 = new Partida(equipo0,equipo1);
-        Partida partida2 = new Partida(equipo2,equipo3);
+        Encuentro encuentro1 = new Encuentro(equipo0,equipo1);
+        Encuentro encuentro2 = new Encuentro(equipo2,equipo3);
 
-        this.listaDePartidas.add(partida1);
-        this.listaDePartidas.add(partida2);
+        this.listaDeencuentros.add(encuentro1);
+        this.listaDeencuentros.add(encuentro2);
         this.generarArbol();
     }
 
-    public List<Partida> getPartidas(){
-        return this.listaDePartidas;
+    public List<Encuentro> getEncuentros(){
+        return this.listaDeEncuentros;
     }
 
     private void generarArbol(){
-        this.arbolTorneo.setRaiz( new Partida() ) // partida en la raiz sin equipos
-        Nodo nodo1 = new Nodo (this.listaDePartidas.get(0))
-        Nodo nodo2 = new Nodo (this.listaDePartidas.get(1))
+        this.arbolTorneo.setRaiz( new Encuentro() ) // encuentro en la raiz sin equipos
+        Nodo nodo1 = new Nodo (this.listaDeEncuentros.get(0))
+        Nodo nodo2 = new Nodo (this.listaDeEncuentros.get(1))
 
         this.arbolTorneo.agregarNodo(nodo1)
         this.arbolTorneo.agregarNodo(nodo2)
     }
 
-    public Partida getPartidaFinal(Equipo unEquipo, Equipo otroEquipo){
-        return new Partida(unEquipo, otroEquipo)
+    public Encuentro getEncuentroFinal(Equipo unEquipo, Equipo otroEquipo){
+        return new Encuentro(unEquipo, otroEquipo)
     }
 
-    public Partida getPartidasIniciales(){
+    public Encuentro getEncuentrosIniciales(){
 
     }
 

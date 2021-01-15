@@ -3,25 +3,25 @@ import tpdeportivo.logicaJuego.*
 
 class Nodo {
 
-    Partida partida
+    Encuentro encuentro
     Nodo hojaIzquierda
     Nodo hojaDerecha
 
     static constraints = {
     }
 
-    Nodo(Partida unaPartida) {
-        this.partida = unaPartida
+    Nodo(Encuentro unEncuentro) {
+        this.encuentro = unEncuentro
         this.hojaIzquierda = null
         this.hojaDerecha = null
     }
 
-    void setPartida(Partida unaPartida ) {
-        this.partida = unaPartida
+    void setEncuentro(Encuentro unEncuentro ) {
+        this.encuentro = unEncuentro
     }
  
-    Partida getPartida() {
-        return this.partida
+    Encuentro getEncuentro() {
+        return this.encuentro
     }
  
     Nodo getHojaIzquierda() {
