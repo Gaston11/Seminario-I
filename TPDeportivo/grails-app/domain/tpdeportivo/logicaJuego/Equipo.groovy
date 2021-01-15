@@ -25,7 +25,7 @@ class Equipo {
     public void agregarAlumnno(Alumno unAlumno){
         if (listaAlumnos.size() < maximoAlumnos)
             listaAlumnos.add(unAlumno)
-            else estado = CERRADO
+            else estado = Estado.CERRADO
     }
 
     public void eliminarAlumno(Alumno unAlumno){

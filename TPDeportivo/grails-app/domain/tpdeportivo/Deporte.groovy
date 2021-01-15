@@ -10,23 +10,17 @@ enum Estado {
 class Deporte {
     
     int id
-	String nombre
-	Date horaInicio
-	Espacio espacio
-	Estado estado  
-    int cantidadCupos 
-    String resultado
+    String nombre
+    Espacio espacio
+    Estado estado  
 
-	static hasMany = [alumnos: Alumno]
+    static hasMany = [alumnos: Alumno]
 
     static constraints = {
-    	nombre black: false, nullable: false
-        horaInicio black: false, nullable: false
+        nombre black: false, nullable: false
         espacio black: false, nullable: false
         estado black: false, nullable: false
-    	cantidadCupos black: false, nullable: false, min: 0
-        resultado black: true, nullable: true,editable:false
-        alumnos black: true, nullable: true,editable:false
+        alumnos black: true, nullable: true, editable:false
     }
 
     @Override
