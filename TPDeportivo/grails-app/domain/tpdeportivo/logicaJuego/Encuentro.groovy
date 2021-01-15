@@ -1,6 +1,6 @@
 package tpdeportivo.logicaJuego
 
-enum Estado {
+enum EstadoEncuentro {
         ENCURSO,TERMINADO,PENDIENTE
     }
 
@@ -8,7 +8,7 @@ class Encuentro {
 
     Equipo equipo1
     Equipo equipo2
-    Estado estado = Estado.PENDIENTE
+    EstadoEncuentro estado = EstadoEncuentro.PENDIENTE
     String resultado
     Equipo equipoGanador = null
     Date horaInicio
@@ -27,7 +27,7 @@ class Encuentro {
     }
 
     private void modificarAEstadoTerminado(){
-        this.estado = Estado.TERMINADO
+        this.estado = EstadoEncuentro.TERMINADO
     }
 
     public void modificarEstado(Estado unEstado){

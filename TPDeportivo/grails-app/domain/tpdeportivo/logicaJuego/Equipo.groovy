@@ -14,7 +14,7 @@ class Equipo {
     static constraints = {
         nombre black: false, nullable: false
         listaAlumnos black: true, nullable: true,editable:false
-        maximoAlumnos black: false max: maximoAlumnos
+        maximoAlumnos black: false, max: maximoAlumnos
         estado black: false, nullable: false
     }
 

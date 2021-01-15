@@ -1,4 +1,6 @@
 package tpdeportivo.logicaJuego
+import tpdeportivo.*
+import tpdeportivo.logicaJuego.logicaTorneo.*
 
 class Torneo {
 
