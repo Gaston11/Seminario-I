@@ -15,4 +15,6 @@ interface IDeporteService {
     Deporte save(Deporte deporte)
 
     void suscribir(Alumno alumno)
+
+    void generarDeporte(String nombre)
 }

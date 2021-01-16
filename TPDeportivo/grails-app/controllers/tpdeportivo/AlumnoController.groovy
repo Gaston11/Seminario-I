@@ -93,7 +93,7 @@ class AlumnoController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'alumno.label', default: 'Alumno'), id])
-                redirect action:"index", method:"GET"
+                redirect action:"index", method:"PUT"
             }
             '*'{ render status: NO_CONTENT }
         }

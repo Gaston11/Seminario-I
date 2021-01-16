@@ -20,7 +20,6 @@ class Deporte {
         nombre black: false, nullable: false
         espacio black: false, nullable: false
         estado black: false, nullable: false
-        alumnos black: true, nullable: true, editable:false
     }
 
     @Override
