@@ -14,7 +14,7 @@ class Deporte {
     Espacio espacio
     Estado estado  
 
-    static hasMany = [alumnos: Alumno]
+    //static hasMany = [alumnos: Alumno]
 
     static constraints = {
         nombre black: false, nullable: false
