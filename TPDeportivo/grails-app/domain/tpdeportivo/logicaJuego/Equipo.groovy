@@ -1,5 +1,5 @@
 package tpdeportivo.logicaJuego
-import tpdeportivo.Alumno
+import tpdeportivo.*
 
 enum Estado {
     ABIERTO,CERRADO

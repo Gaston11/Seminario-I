@@ -1,5 +1,5 @@
 package tpdeportivo
-import tpdeportivo.logicaJuego.Equipo
+import tpdeportivo.logicaJuego.*
 
 class Alumno {
 
@@ -8,7 +8,7 @@ class Alumno {
     String telefono
     String email
     //Equipo equipo
-    
+
     static hasMany = [deportes: Deporte]
 
     static constraints = {
@@ -28,3 +28,4 @@ class Alumno {
         //this.equipo = unEquipo 
     //} 
 }
+
