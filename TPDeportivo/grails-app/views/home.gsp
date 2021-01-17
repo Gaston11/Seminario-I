@@ -27,11 +27,18 @@
                 <li><a href="/Alumno/Create">Crear</a></li>
             </ul>
         </li>
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Equipo <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="/Equipo/index">Ver</a></li>
+                <li><a href="/Equipo/Create">Crear</a></li>
+            </ul>
+        </li>
     </content>
 
     <div class="svg" role="presentation">
         <div class="grails-logo-container">
-            <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
+            <asset:image src="PaseoColonGde.png" class="grails-logo"/>
         </div>
     </div>
 
