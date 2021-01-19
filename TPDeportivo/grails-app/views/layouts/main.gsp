@@ -38,7 +38,9 @@
 
     <g:layoutBody/>
 
-    <div class="footer" role="contentinfo"></div>
+    <div class="footer" role="contentinfo">
+        <g:render template="/common/footer"/>
+    </div>
 
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>
