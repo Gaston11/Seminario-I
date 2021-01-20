@@ -7,9 +7,10 @@ class Alumno {
     Date fechaNacimiento
     String telefono
     String email
-    Equipo equipo
+    //Equipo equipo
+
     
-    static hasMany = [deportes: Deporte]
+    //static hasMany = [deportes: Deporte]
 
     static constraints = {
         nombre black: false, nullable: false
@@ -23,10 +24,6 @@ class Alumno {
         return this.nombre;
     }
 
-    public void crearEquipo(int maximo){
-        Equipo unEquipo = new Equipo(maximo)
-        this.equipo = unEquipo 
-    } 
-
     
 }
+

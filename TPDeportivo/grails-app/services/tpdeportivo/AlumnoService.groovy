@@ -16,4 +16,9 @@ abstract class AlumnoService implements IAlumnoService{
 		alumno.save()
 	}
 
+	void crearEquipo(int maximo){
+        //Equipo unEquipo = new Equipo(maximo)
+        //Alumno.equipos.add(unEquipo) 
+    } 
+
 }

@@ -60,8 +60,4 @@ class Torneo {
     public Encuentro getEncuentrosIniciales(){
 
     }
-
-
-
-
 }

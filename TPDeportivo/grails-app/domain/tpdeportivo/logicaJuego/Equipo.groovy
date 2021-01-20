@@ -7,14 +7,14 @@ enum Estado {
 
 class Equipo {
     String nombreEquipo
-	List<Alumno> listaAlumnos
+    List<Alumno> listaAlumnos
     int maximoAlumnos
-    Estado estado = ABIERTO
+    Estado estado = Estado.ABIERTO
 
     static constraints = {
-        nombre black: false, nullable: false
+        nombreEquipo black: false, nullable: false
         listaAlumnos black: true, nullable: true,editable:false
-        maximoAlumnos black: false, max: maximoAlumnos
+        maximoAlumnos black: false, max: 4 // Setear maximo ??
         estado black: false, nullable: false
     }
 
@@ -25,7 +25,7 @@ class Equipo {
     public void agregarAlumnno(Alumno unAlumno){
         if (listaAlumnos.size() < maximoAlumnos)
             listaAlumnos.add(unAlumno)
-            else estado = CERRADO
+            else estado = Estado.CERRADO
     }
 
     public void eliminarAlumno(Alumno unAlumno){

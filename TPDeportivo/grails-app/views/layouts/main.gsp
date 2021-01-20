@@ -14,7 +14,12 @@
     <g:layoutHead/>
 </head>
 <body>
-
+    <div id="header">
+        <g:render template="/common/header"/>
+    </div>
+    <div id="headertitle">
+        <h1>Competencia FIUBA</h1>
+    </div>
     <div class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -38,7 +43,9 @@
 
     <g:layoutBody/>
 
-    <div class="footer" role="contentinfo"></div>
+    <div class="footer" role="contentinfo">
+        <g:render template="/common/footer"/>
+    </div>
 
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>

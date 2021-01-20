@@ -92,6 +92,19 @@ class DeporteController {
 
     }
 
+    def generarDeporte(){
+        deporteService.generarDeporte("Futbol")
+        deporteService.generarDeporte("Voley")
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'deporte.label', default: 'Deporte'), id])
+                redirect action:"index", method:"GET"
+            }
+            '*'{ render status: NO_CONTENT }
+        }
+    }
+
     protected void notFound() {
         request.withFormat {
             form multipartForm {

@@ -18,3 +18,4 @@ class Reputacion {
         cantidadDeEstrellas = sumatoriaCalificaciones/cantidadDeCalificaciones
     }
 }
+
